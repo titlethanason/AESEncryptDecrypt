@@ -93,6 +93,9 @@ func main() {
 	} else if len(os.Args) == 2 && os.Args[1] == "decrypt" {
 		decrypt(secret, inputText)
 	} else {
-		fmt.Println("Invalid Argument.")
+		fmt.Println("Encryption: put raw text in input.txt and secret in secret.txt")
+		fmt.Println("            then 'go run aes.go encrypt'")
+		fmt.Println("Decryption: put encrypted text (hex) in input.txt and secret in secret.txt")
+		fmt.Println("            then 'go run aes.go decrypt'")
 	}
 }
