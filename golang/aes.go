@@ -62,9 +62,9 @@ func encrypt(secret string, rawText string) {
 	fmt.Printf("%x\n", ciphertext)
 }
 
-func decrypt(secret string, encryptedTxt string) {
+func decrypt(secret string, encryptedText string) {
 	key := _getSha256Encrypt(secret)
-	ciphertext, _ := hex.DecodeString(encryptedTxt)
+	ciphertext, _ := hex.DecodeString(encryptedText)
 
 	block, err := aes.NewCipher(key)
 	if err != nil {
